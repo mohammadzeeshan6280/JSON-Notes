@@ -1,0 +1,10 @@
+{
+    "name" : "whitehat",
+    "mobile" : 1204547,
+    "city" : "swm",
+    "course" : ["dart", "flutter", "html", "css"],
+    "address" : {
+        "area" : "ansari mohalla",
+        "pin" : 322001
+    }
+}

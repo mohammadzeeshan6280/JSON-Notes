@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>How to Parse JSON Data using JavaScript</h2>
+    <script>
+        let obj = `{
+            "name" : "whitehat", 
+            "email" : "whitehat@gmail.com",
+            "age" : 24,
+            "city" : "swm",
+            "courses" : ["HTML", "CSS", "JS"]
+        }`
+
+        let data = JSON.parse(obj)
+        console.log(data)
+        let dataName = data.name
+        let email = data.email
+        let city = data.city
+        console.log(dataName, email, city)
+        let c1 = data.courses[0]
+        let c2 = data.courses[1]
+        let c3 = data.courses[2]
+        console.log(c1,c2,c3)
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+	-------What is JSON--------
+JSON - JavaScript Object Notation
+Lightweight Data-Interchange Format
+
+1. What is JSON
+JSON is an open standard for exchanging data on the web. it
+supports data structures like object and array. So it is esay to write
+and read data from JSON.
+
+(i) JSON stands for JavaScript Object Notation
+(ii) JSON is a syntax for storing and exchanging data
+(iii) JSON is text, written with JavaScript object notation
+(iv) JSON is lightweight and self describing
+(v) JSON is origintated from JavaScript
+(vi) JSON is easy to read and write
+(vii) JSON is language independent
+(viii) JSON supports data structures such as array and objects
+
+2. Why Use JSON
+(i) Since the JSON format is text only, it can easily be send and from
+a server, and used as a data format by any programming language
+
+(ii) JavaScript has a built in function to convert a string, written in JSON
+format, into native JavaScript objects
+JSON.parse()
+
+(iii) So if you receive data form a server, in JSON format, you can use it
+like any other JavaScript object
+
+	------ JSON vs XML -------
+No.	JSON				XML
+1.	JSON stands for JS Object Natition	XML stands for eXensible Markup Language
+2.	JSON is simple to read and write		XML is less simple less JSON
+3.	JSON is easy to learn			XML is less easy than JSON
+4.	JSON is data-oriented			XML is document-oriented
+5.	JSON doesn't provide display capabilities	XML provides the capability to dispaly data because it s a markup language
+6.	JSON supports array			XML doesn't support array
+7. 	JSON is less secured than XML		XML file is more secured
+8.	JSON files are more human readable the	XML files are less human readable
+	XML	
+9.	JSON supports only text and number	XML support many data types such as text, number, images charts, graphs, etc.
+	data type				Moreover, XML offers options for transferring the format or structure of the data actual data
+
+	JSON Style			XML style
+{"student" : [				<students>
+{"name" : "raj","age" : "23", "city" : "swm"},		<student>
+{"name" : "ram","age" : "24", "city" : "jpr"},		<name>Raj</name> <age>23</age> <city> swm </city>
+{"name" : "raju","age" : "22", "city" : "delhi"},	</student>
+{"name" : "ramu","age" : "25", "city" : "kota"}	<student>
+ ]}					<name>Ram</name> <age>24</age> <city> jpr </city>
+					</student>	
+					<student>
+					<name>Ramu</name> <age>25</age> <city> delhi </city>
+					</student>	
+					</students>
+3. Similarities between JSON and XML
+1. Both are simple and open
+2. Both supports Unicode. So internationaliztion is suppoted by JSON and XML both
+3. Both represents self describing data
+4. Both are interoperable or language-indeoendent
+	
+--------- How to Create JSON File --------	
+Generic Rules to be followed while creating a JSON
+(i) JSON Objects should starts and end with braces "{}".
+(ii) Key fields are incluede in the double quotes.
+(iii) Values are represented by putting ":" colon between them and the keys. 
+(iv) JSON key-value pairs are separated by a comma ",".
+(v) Values can be of any data type like String, Integer, Boolean etc.
+(vi) JSON file must save with ".json" extension
+(vii) The MIME type for JSON text is "application/json"
+
+------- JSON Data Types -------
+1. In JSON, values must be one of the following data types:
+(i) a string
+(ii) a number
+(iii) a object(JSON Object)
+(iv) a boolean 
+(v) Null
+
+2. JSON values cannot be one of the following data types
+(i) a fucntion
+(ii) a date
+(iii) undefined
+
+(i) JSON Object with Strings
+{
+	"name" : "whitehat",
+	"email" : "ansari@gmail.com"
+}
+
+(ii) JSON Object with Numbers
+JSON supports numbers in double precision floating-point format. The number can be
+digit (0-9), functions (.33,.523 etc) and exponents (e,e+, e-, E, E+,E-).
+{
+	"integer" : 34,
+	"fraction" : .2145,
+	"exponent" : 6.6145e+0
+}
+
+(iii) JSON Object with Object
+Values in JSON can be objects
+{
+	"employee" : {"name" : "John", "age" : 30, "ciry" : "swm"}
+}
+
+(iv) JSON Nested Object Example
+A JSON object can have another object also. Let's see a simple example of JSON object having another object
+{
+	"fname" : "white",
+	"lname" : "hat",
+	"age" :	24,
+	"city" :	"swm",
+	"address" : {
+	"streetAddress" : "10/25, ansari mohalla",
+	"state" : "RJ",
+	"pincode" : 322001
+	}
+}
+
+(iv) JSON Object with Array
+Values in JSON can be arrays
+{
+	"course" : ["html", "css", "js"]
+}
+
+(v) JSON Array of Object 
+Let's see a simple JSON array example having 4 objects
+{
+	"employee" : [
+	{"name" : "raj","email" : "raj@gmail,com", "age" : 22},	
+	{"name" : "raju","email" : "raju@gmail,com", "age" : 23},	
+	{"name" : "ram","email" : "ram@gmail,com", "age" : 24},	
+	{"name" : "ravi","email" : "ravi@gmail,com", "age" : 25}	
+	]
+}
+
+(vi) JSON  Object with Boolean
+JSON also supports boolean values true or false
+{
+	"first" : true,
+	"second" : false
+}
+
+(vii) JSON  Object with Null
+Values in JSON can be null
+{
+	"middlename" : null
+}
+
+(vii) JSON Comments
+JSON doesn't support comments. it is not a standard
+But you can do some tricks such as adding extra attribute for comment in JSON objec, for example
+{
+	"employee" : {
+		"name" : "Ansari",
+		"salary" : 24000,
+		"comments" : "He is a nice man"
+		}
+}
+
+NOTE :- Here, "comments" attribute can be treated as comment
+
+--------- How to Access JSON Object Values-JSON --------
+(i) JSON Objects are surrounded by curly braces {}.
+(ii) JSON Object are written in key/value pairs
+(iii) Keys must be strings, and values must be a vaild JSON data type (string, number, object, array, boolean or null)
+(iv) Keys and values are separated by a colon.
+(v) Each key/value pair is separated by a comma
+
+Example 
+{ "name" : "raj", "marks" : 49, "city" : "swm"}
+
+Accessing Object Values:
+(i) We can access the object values by using dot (.) or using bracket ([]) notation
+(ii) When using bracket ([]) notation must pass key within double quote("") 
+
+-------- How to Access JSON Object Keys & Values ---------
+<script>
+    let obj = {
+        name : "WhiteHat",
+        email : "whitehat@gmail.com",
+        age : 24,
+        city : "swm"
+    }
+
+    for(let key in obj){
+        console.log(key + " : " + " " + obj[key])
+    }
+</script>
+
+--------- How to Access Nested JSON Object Values ---------
+   <script>
+        let obj = {
+            name : "whitehat",
+            mobile : 41245154,
+            courses : {
+                courses1 : "HTML",
+                courses2 : "CSS",
+                courses3 : "JS",
+            }
+        };
+    // c1 = obj.courses.courses1
+    // c2 = obj.courses.courses2
+    // c3 = obj.courses.courses3
+
+    c1 = obj.courses["courses1"]
+    c2 = obj.courses["courses2"]
+    c3 = obj.courses["courses3"]
+    console.log(c1, c2 ,c3)
+    console.log(obj)
+    </script>
+
+------- How to Access Nested Object using Loop -------
+ <script>
+           let obj = {
+            name : "whitehat",
+            mobile : 41245154,
+            courses : {
+                courses1 : "HTML",
+                courses2 : "CSS",
+                courses3 : "JS",
+
+            }
+        };
+        
+        for(let key in obj){
+            console.log(obj[key])
+        }
+
+        for(let key in obj.courses){
+            console.log(obj.courses[key])
+        }
+    </script>
+
+------- How to Access JSON Array Values-JSON --------
+<script>
+        let obj = {
+            name : "Whitehat",
+            age : 24,
+            city : "swm",
+            courses : ["HTML", "CSS", "JS", "jQuery"]
+        }
+        let c1 = obj.courses[0]
+        let c2 = obj.courses[1]
+        let c3 = obj.courses[2]
+        let c4 = obj.courses[3]
+        console.log(c1,c2,c3,c4)
+    </script>
+
+------- How to Access Array Values Using for-in Loop ------
+<script>
+        let obj = {
+            name : "Whitehat",
+            age : 24,
+            city : "swm",
+            courses : ["HTML", "CSS", "JS", "jQuery"]
+        }
+
+       for(let key in obj.courses){
+        console.log(obj.courses[key])
+       }
+    </script>
+
+--------  How to Access Array Values Using for Loop --------
+ <script>
+        let obj = {
+            name : "Whitehat",
+            age : 24,
+            city : "swm",
+            courses : ["HTML", "CSS", "JS", "jQuery"]
+        }
+        // Modifing Array Value
+        obj.courses[0] = "PYTHON"
+
+        // Delete Array index Value
+       delete obj.courses[3];
+for (let i = 0; i < obj.courses.length; i++) {
+    console.log(obj.courses[i])
+    
+}
+    </script>
+
+------- How to Access Nested Array using Loop -------
+   <script>
+        let obj = {
+            name : "Whitehat", 
+            age : 24,
+            city : "swm",
+            courses : [
+            {catname : "Website Development", cname : ["HTML", "CSS", "JS"]},
+            {catname : "Android Development", cname : ["Flutter", "Java", "Dart"]},
+            {catname : "Word Development", cname : ["PHP", "Node", "Express"]}
+        ]}
+
+        for(let i in obj.courses){
+console.log(obj.courses[i].catname);
+            for(let j in obj.courses[i].cname){
+                console.log(obj.courses[i].cname[j])
+            }
+
+        }
+    </script>
+
+-------- How to Parse JSON Data using JavaScript -------
+JSON Parse
+(i) A common use of JSON is to exchange data to/from a web server.
+(ii) When receiving data from a web server, the data is always a string.
+(iii) Parse the data with JSON.parse(). and the data becomes a JavaScript Object.
+
+Example
+let obj = JSON.parse({"name" : "Raj", "marks" : 30, "city" : "swm"});
+
+Exceptions :
+Date objects and function are not allowed in JSON.
+if you need to include a date or fuction, write it as a string
+You can convert it back into a date object or function later
+
+ <script>
+        let obj = `{
+            "name" : "whitehat", 
+            "email" : "whitehat@gmail.com",
+            "age" : 24,
+            "city" : "swm",
+            "courses" : ["HTML", "CSS", "JS"]
+        }`
+
+        let data = JSON.parse(obj)
+        console.log(data)
+        let dataName = data.name
+        let email = data.email
+        let city = data.city
+        console.log(dataName, email, city)
+        let c1 = data.courses[0]
+        let c2 = data.courses[1]
+        let c3 = data.courses[2]
+        console.log(c1,c2,c3)
+</script>
+
+--------- How to Convert a String into a Date ---------
+
+  
+
+        let obj = `{
+            "name" : "Whitehat",
+            "age" : 23,
+            "email" : "ansari@gmail.com",
+            "dob" : "1998-05-19"
+        }`;
+
+// let parseObj = JSON.parse(obj)
+        // console.log(parseObj)
+
+        // let parseObj = JSON.parse(obj)
+        // parseObj.dob = new Date(parseObj.dob)
+        // console.log(parseObj.dob)
+
+        let parseData = JSON.parse(obj, function(key, value){
+            if(key == "dob"){
+                return new Date(value)
+            } else {
+                return value;
+            }
+        })
+        console.log( "Name : " + parseData.name , "dob :" + parseData.dob)
+
+------- How to Convert JavaScript Object into JSON String -------
+JSON Stringify
+(i) A common use of JSON is to exchange data to/from a web server.
+(ii) When sending data to a web server, the data has to be a string.
+(iii) Convert a JavaScript object into a string with JSON.stringify()
+
+Example
+let obj = {name : "Raj", marks : 30, city : "swm"};
+let myJSON = JSON.stringify(obj);
+
+Exceptions
+(i) in JSON, date objects and function are not allowed as Object values
+(ii) The JSON.stringify() function will convert any dates into strings
+(iii) The JSON.stringify() function will remove any functions from a JavaScript object, both the key and the value
+
+ <script>
+        let obj = {
+            name : "whitehat",
+            email : "ansari@gmail.com",
+            age : 30,
+            bool : "true"
+        }
+
+        let jsonData = JSON.stringify(obj)
+        // console.log(jsonData)
+        document.write(jsonData)
+
+        let arr = ["tata", "maruti", "Tavera", "BMW"]
+        let car = JSON.stringify(arr)
+        document.getElementById("demo").innerHTML = car
+    </script>

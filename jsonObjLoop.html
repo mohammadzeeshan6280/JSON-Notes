@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ow to Access JSON Object Keys & Values</title>
+</head>
+<body>
+    <p>Accessing JSON Object Keys and values using for/in Loop</p>
+</body>
+
+<script>
+    let obj = {
+        name : "WhiteHat",
+        email : "whitehat@gmail.com",
+        age : 24,
+        city : "swm"
+    }
+
+    for(let key in obj){
+        console.log(key + " : " + " " + obj[key])
+    }
+</script>
+</html>

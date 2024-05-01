@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Array</title>
+</head>
+<body>
+    <h2>How to Access Array Values Using for-in Loop</h2>
+    <script>
+        let obj = {
+            name : "Whitehat",
+            age : 24,
+            city : "swm",
+            courses : ["HTML", "CSS", "JS", "jQuery"]
+        }
+
+       for(let key in obj.courses){
+        console.log(obj.courses[key])
+       }
+    </script>
+</body>
+</html>

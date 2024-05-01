@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How to Access Nested JSON Object Values</h1>
+    <script>
+        let obj = {
+            name : "whitehat",
+            mobile : 41245154,
+            courses : {
+                courses1 : "HTML",
+                courses2 : "CSS",
+                courses3 : "JS",
+
+            }
+        };
+
+    // c1 = obj.courses.courses1
+    // c2 = obj.courses.courses2
+    // c3 = obj.courses.courses3
+
+    c1 = obj.courses["courses1"]
+    c2 = obj.courses["courses2"]
+    c3 = obj.courses["courses3"]
+    console.log(c1, c2 ,c3)
+    console.log(obj)
+
+    
+
+
+    </script>
+</body>
+</html>

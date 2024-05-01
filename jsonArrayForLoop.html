@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Array</title>
+</head>
+<body>
+    <h2> How to Access Array Values Using for Loop</h2>
+    <script>
+        let obj = {
+            name : "Whitehat",
+            age : 24,
+            city : "swm",
+            courses : ["HTML", "CSS", "JS", "jQuery"]
+        }
+        // Modifing Array Value
+        obj.courses[0] = "PYTHON"
+
+        // Delete Array index Value
+       delete obj.courses[3];
+for (let i = 0; i < obj.courses.length; i++) {
+    console.log(obj.courses[i])
+    
+}
+    </script>
+</body>
+</html>

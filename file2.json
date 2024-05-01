@@ -1,0 +1,15 @@
+{
+    "name" : "ansari",
+    "marks" : 78,
+    "date" : "2024-02-14",
+    "courses" : ["html", "css", "js", "jquery"],
+    "address" : {
+        "city" : "swm",
+        "area" : "ansari mohalla",
+        "pin" : 322001,
+        "lon" : 80.254,
+        "lat" : 45.235
+    },
+    "married" : false,
+    "dob" : null
+}

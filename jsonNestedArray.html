@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Array</title>
+</head>
+<body>
+    <h2> How to Access Nested Array using Loop</h2>
+    <script>
+        let obj = {
+            name : "Whitehat", 
+            age : 24,
+            city : "swm",
+            courses : [
+            {catname : "Website Development", cname : ["HTML", "CSS", "JS"]},
+            {catname : "Android Development", cname : ["Flutter", "Java", "Dart"]},
+            {catname : "Word Development", cname : ["PHP", "Node", "Express"]}
+        ]}
+
+        for(let i in obj.courses){
+console.log(obj.courses[i].catname);
+            for(let j in obj.courses[i].cname){
+                console.log(obj.courses[i].cname[j])
+            }
+
+        }
+    </script>
+</body>
+</html>

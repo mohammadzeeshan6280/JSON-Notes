@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>How to Convert a String into a Date</h2>
+    <script>
+        // let obj = `{
+        //     "name" : "Whitehat",
+        //     "age" : 23,
+        //     "email" : "ansari@gmail.com",
+        //     "dob" : "1998-05-19"
+        // }`
+
+        // let parseObj = JSON.parse(obj)
+        // console.log(parseObj)
+
+        // let parseObj = JSON.parse(obj)
+        // parseObj.dob = new Date(parseObj.dob)
+        // console.log(parseObj.dob)
+
+        let obj = `{
+            "name" : "Whitehat",
+            "age" : 23,
+            "email" : "ansari@gmail.com",
+            "dob" : "1998-05-19"
+        }`;
+
+        let parseData = JSON.parse(obj, function(key, value){
+            if(key == "dob"){
+                return new Date(value)
+            } else {
+                return value;
+            }
+        })
+        console.log( "Name : " + parseData.name , "dob :" + parseData.dob)
+
+
+    </script>
+</body>
+</html>
